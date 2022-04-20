@@ -15,7 +15,7 @@
 
     </article>
 -->
-<!-- Aula 10 -->
+<!-- Aula 10
     <article>
         <h3>Class e Style Binding</h3>
         <div>
@@ -38,7 +38,41 @@
 
         </div>
     </article>
+ -->
+<!-- Aula 11 -->
+<article>
+  <h3>Event binding</h3>
+  <div>
+    <button (click)="botaoCriado()" class="btn btn-primary">Me clique</button>
+    <br><br>
+    <input type="text"
+    (keyup)="onKeyUp($event)"
+    (keyup.enter)="salvarValor(campoInput.value)"
+    (blur)="salvarValor(campoInput.value)" #campoInput>
+    <p>Valor atual: {{ valorAtual }}</p>
+    <p>Valor salvo: {{ valorSalvo }}</p>
+
+    <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver">Passe o mouse sobre mim</span>
+
+
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </section>
+
+
 
 
 
